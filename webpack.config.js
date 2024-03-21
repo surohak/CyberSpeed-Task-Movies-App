@@ -35,7 +35,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     // Note: comment below line to run desktop app
-    publicPath: '/',
+    // publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({

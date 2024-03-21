@@ -11,7 +11,7 @@ Then, run the development server:
 
 ```npm run start``` - for Web
 
-```npm run electron-start``` - for Electron (make sure when starting Electron in the file `webpack.config.js` the `publicPath` is commented)
+```npm run electron-start``` - for Electron (make sure when starting Electron in the file `webpack.config.js` the `publicPath` is commented and the commented `meta` opened in `index.html`)
 
 Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
 
