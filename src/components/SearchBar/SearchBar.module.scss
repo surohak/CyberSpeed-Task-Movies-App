@@ -1,0 +1,33 @@
+@import "styles/colors";
+
+.searchBarContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  .searchInput {
+    background-color: $lightBg;
+    border-radius: 8px;
+    border-color: transparent;
+    font-size: 14px;
+    height: 40px;
+    padding: 0 15px;
+    width: 100%;
+    outline: none;
+    color: $darkText;
+  }
+  .searchIconContainer {
+    width: 40px;
+    height: 40px;
+    background-color: $lightBg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    svg {
+      color: $darkText;
+    }
+  }
+}

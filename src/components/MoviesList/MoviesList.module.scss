@@ -1,0 +1,81 @@
+@import "styles/colors";
+@import "styles/vars";
+
+.moviesListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding-right: 20px;
+  .movieItemContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 24px 20px;
+    border-radius: 16px;
+    border: 1px solid $content_alpha_200;
+    gap: 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: $content_alpha_100;
+    }
+    .movieItemImg {
+      width: 72px;
+      height: 108px;
+      border-radius: 8px;
+    }
+    .movieItemInfo {
+      .movieTitle {
+        color: $lightText;
+        font-size: 18px;
+        font-weight: 500;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+      .movieActors {
+        margin-top: 6px;
+        color: $grayText;
+        font-size: 13px;
+        font-weight: 400;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+      .movieImdbLink {
+        margin-top: 18px;
+        background-color: $imdgbBG;
+        color: $black;
+        padding: 4px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        width: fit-content;
+      }
+    }
+    .movieItemRankContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+      margin-left: auto;
+      .movieItemRank {
+        font-size: 24px;
+        font-weight: 700;
+        background: linear-gradient(165deg,#ffd25e 16.44%,#b59646 63.42%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .movieItemRankLabel {
+        font-size: 12px;
+        font-weight: 500;
+        color: $lightText;
+      }
+    }
+  }
+}

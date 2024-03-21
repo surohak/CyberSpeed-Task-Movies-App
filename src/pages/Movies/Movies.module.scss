@@ -1,0 +1,20 @@
+@import "styles/vars.scss";
+
+.moviesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  align-self: center;
+  height: 100vh;
+  padding: 80px 100px 40px;
+  div {
+    max-width: $breakpoint_desktop-small;
+  }
+}
+
+@media (max-width: $breakpoint_tablet) {
+  .moviesContainer {
+    padding: 40px 20px 40px;
+  }
+}
