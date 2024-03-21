@@ -12,11 +12,12 @@ interface IMoviesListProps {
 const MoviesList = ({ movies, onClickMovie }: IMoviesListProps) => {
   return (
     <div className={styles.moviesListContainer}>
-      {movies.map((movie) => (
+      {movies.map((movie, index) => (
         <div
           key={movie['#IMDB_ID']}
           className={styles.movieItemContainer}
           onClick={() => onClickMovie && onClickMovie(movie)}
+          data-testid={`movie-item-${index}`}
         >
           <img className={styles.movieItemImg} src={movie['#IMG_POSTER']} alt="movie-img" />
           <div className={styles.movieItemInfo}>

@@ -21,12 +21,24 @@ const ReviewsMovie = ({ movie }: IReviewsMovieProps) => {
         <span>{movie.review.title}</span>
         <span>Body</span>
         <span>{movie.review.body}</span>
-        <span>Rating value</span>
-        <span>{movie.review.rating.ratingValue}</span>
-        <span>Best</span>
-        <span>{movie.review.rating.bestRating}</span>
-        <span>Worst</span>
-        <span>{movie.review.rating.worstRating}</span>
+        {movie.review.rating.ratingValue && (
+          <>
+            <span>Rating value</span>
+            <span>{movie.review.rating.ratingValue}</span>
+          </>
+        )}
+        {movie.review.rating.bestRating && (
+          <>
+            <span>Best</span>
+            <span>{movie.review.rating.bestRating}</span>
+          </>
+        )}
+        {movie.review.rating.worstRating && (
+          <>
+            <span>Worst</span>
+            <span>{movie.review.rating.worstRating}</span>
+          </>
+        )}
       </div>
     </>
   );

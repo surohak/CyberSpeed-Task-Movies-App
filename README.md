@@ -48,3 +48,11 @@ Open [http://localhost:8080](http://localhost:8080) with your browser to see the
 ## Linting
 
 This project uses [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) for linting
+
+## Tests
+
+This project uses [Vitest](https://vitest.dev/) for testing. To run the tests, use the following command:
+```npm run test```
+For test files using `__tests__` folder.
+
+For mock API requests using [MSW](https://mswjs.io/).
