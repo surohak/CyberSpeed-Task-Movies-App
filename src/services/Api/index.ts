@@ -14,13 +14,13 @@ class Api {
     patch: 'PATCH',
   };
 
+  // requests
+
   public getMoviesList = (searchValue?: string) =>
     this.request({ method: this.methods.get, params: { type: ApiTypes.search }, query: `?q=${searchValue}` });
 
   public getMovieDetails = (id: string) =>
     this.request({ method: this.methods.get, params: { type: ApiTypes.search }, query: `?tt=${id}` });
-
-  // requests
 
   private request = async (options: IAPIOptions) => {
     const { method, params, query } = options;

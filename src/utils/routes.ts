@@ -14,14 +14,6 @@ export interface IRoute {
   name: string;
   path: Paths;
   Component: LazyExoticComponent<() => JSX.Element> | ComponentType;
-  // hide?: boolean;
-  // isForMobile?: boolean;
-  // hideInMobile?: boolean;
-  // browserTabName?: string;
-  // pageHeaderName?: string;
-  // exact?: boolean;
-  // relativeRouteId?: number;
-  // universal?: boolean;
 }
 
 const routes: IRoute[] = [

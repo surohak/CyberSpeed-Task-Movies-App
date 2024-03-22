@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { app, BrowserWindow, contextBridge } = require('electron');
+const { app, BrowserWindow } = require('electron');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
 

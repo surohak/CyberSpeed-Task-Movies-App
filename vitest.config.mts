@@ -19,7 +19,7 @@ function getAbsolutePathAliases() {
   const absolutePathAliases: { [key: string]: string } = {};
   // Root resources folder
   const srcPath = path.resolve('./src/');
-  // Ajust the regex here to include .vue, .js, .jsx, etc.. files from the resources/ folder
+  // Adjust the regex here to include .js, .jsx, etc.. files from the resources/ folder
   const srcRootContent = readdirSync(srcPath, { withFileTypes: true }).map((dirent) =>
     dirent.name.replace(/(\.ts){1}(x?)/, '')
   );
