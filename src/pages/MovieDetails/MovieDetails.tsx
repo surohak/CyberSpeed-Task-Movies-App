@@ -18,7 +18,6 @@ const MovieDetails = () => {
   const navigate = useNavigate();
 
   const [movie, setMovie] = useState<null | IMovieDetails>(null);
-  const [res, setRes] = useState<any>(null);
 
   const getMovieDetails = useCallback(async () => {
     if (!id) return;
@@ -28,8 +27,6 @@ const MovieDetails = () => {
     if (!res) return;
 
     const { short } = res;
-
-    setRes(res);
 
     setMovie({
       title: short?.name,
