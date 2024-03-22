@@ -21,7 +21,7 @@ describe('Movies', () => {
       };
     });
   });
-  test('renders without crashing', async () => {
+  test('Movies renders without crashing', async () => {
     render(
       <BrowserRouter>
         <Movies />

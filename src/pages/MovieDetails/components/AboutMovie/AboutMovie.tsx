@@ -25,7 +25,8 @@ const AboutMovie = ({ movie }: IAboutMovieProps) => {
         <div>
           {movie.actors.map((actor, index) => (
             <a key={actor.url} href={actor.url} target="_blank" rel="noreferrer">
-              {actor.name} {index !== movie.actors.length - 1 && ', '}
+              {actor.name}
+              {index !== movie.actors.length - 1 && ', '}
             </a>
           ))}
         </div>

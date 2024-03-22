@@ -116,3 +116,84 @@ export const mockedMoviesList = {
   ],
   error_code: 200,
 };
+
+export const mockedMovieDetails = {
+  short: {
+    '@context': 'https://schema.org',
+    '@type': 'TVSeries',
+    url: 'https://www.imdb.com/title/tt31027788/',
+    name: 'Mahsun J',
+    image:
+      'https://m.media-amazon.com/images/M/MV5BZWU1OTZhOTctZjhmMC00NTVhLWE1NzYtNDFlNTYxMjAyYmE3XkEyXkFqcGdeQXVyNDg4MjkzNDk@._V1_.jpg',
+    description: 'The interesting story of Mahsun who tried to become a gigolo while working as a courier.',
+    review: {
+      '@type': 'Review',
+      itemReviewed: {
+        '@type': 'TVSeries',
+        url: 'https://www.imdb.com/title/tt31027788/',
+      },
+      author: {
+        '@type': 'Person',
+        name: 'aliyagmur-60778',
+      },
+      dateCreated: '2024-02-09',
+      inLanguage: 'English',
+      name: 'Love This',
+      reviewBody:
+        'Mahsun Karaca started with short videos and proved himself in the field of films and TV series. The scenario does not have an exaggerated story, what makes this series special is that a YouTube phenomenon can make such a good comedy. While the comedy projects of old stars such as Cem Yilmaz, Ata Demirer and Ahmet Kural are fading, Mahsun Karaca now clearly shows who owns the throne. I also liked Yosi Mizrahi&apos;s acting very much, I can say that the character he portrays is almost himself. Mahsun Karaca, who makes very high quality comedies with very small budgets, gave the necessary answer for the industry.',
+      reviewRating: {
+        '@type': 'Rating',
+        worstRating: 2,
+        bestRating: 8,
+        ratingValue: 7,
+      },
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingCount: 6876,
+      bestRating: 10,
+      worstRating: 1,
+      ratingValue: 8.5,
+    },
+    genre: ['Comedy'],
+    datePublished: '2024-01-26',
+    actor: [
+      {
+        '@type': 'Person',
+        url: 'https://www.imdb.com/name/nm10018889/',
+        name: 'Mahsun Karaca',
+      },
+      {
+        '@type': 'Person',
+        url: 'https://www.imdb.com/name/nm10114798/',
+        name: 'Eda Akalin',
+      },
+      {
+        '@type': 'Person',
+        url: 'https://www.imdb.com/name/nm11962208/',
+        name: 'Tugçe Yolcu',
+      },
+    ],
+    creator: [
+      {
+        '@type': 'Organization',
+        url: 'https://www.imdb.com/company/co0855831/',
+      },
+    ],
+  },
+  imdbId: 'tt31027788',
+  fake: {
+    '#TITLE': 'Mahsun J',
+    '#YEAR': 2024,
+    '#IMDB_ID': 'tt31027788',
+    '#RANK': 4520,
+    '#ACTORS': 'Mahsun Karaca, Eda Akalin',
+    '#AKA': 'Mahsun J (2024) ',
+    '#IMDB_URL': 'https://imdb.com/title/tt31027788',
+    '#IMDB_IV': 'https://t.me/iv?url=https%3A%2F%2Fimdb.com%2Ftitle%2Ftt31027788&rhash=77ed0696a538f4',
+    '#IMG_POSTER':
+      'https://m.media-amazon.com/images/M/MV5BZWU1OTZhOTctZjhmMC00NTVhLWE1NzYtNDFlNTYxMjAyYmE3XkEyXkFqcGdeQXVyNDg4MjkzNDk@._V1_.jpg',
+    photo_width: 2160,
+    photo_height: 2700,
+  },
+};
