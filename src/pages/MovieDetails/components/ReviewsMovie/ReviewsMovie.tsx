@@ -9,7 +9,7 @@ interface IReviewsMovieProps {
 }
 
 const ReviewsMovie = ({ movie }: IReviewsMovieProps) => {
-  return (
+  return movie.review?.author ? (
     <>
       <div className={styles.sectionTitle}>Reviews</div>
       <div className={styles.sectionContainer}>
@@ -21,19 +21,19 @@ const ReviewsMovie = ({ movie }: IReviewsMovieProps) => {
         <span>{movie.review.title}</span>
         <span>Body</span>
         <span>{movie.review.body}</span>
-        {movie.review.rating.ratingValue && (
+        {movie.review?.rating?.ratingValue && (
           <>
             <span>Rating value</span>
             <span>{movie.review.rating.ratingValue}</span>
           </>
         )}
-        {movie.review.rating.bestRating && (
+        {movie.review.rating?.bestRating && (
           <>
             <span>Best</span>
             <span>{movie.review.rating.bestRating}</span>
           </>
         )}
-        {movie.review.rating.worstRating && (
+        {movie.review.rating?.worstRating && (
           <>
             <span>Worst</span>
             <span>{movie.review.rating.worstRating}</span>
@@ -41,7 +41,7 @@ const ReviewsMovie = ({ movie }: IReviewsMovieProps) => {
         )}
       </div>
     </>
-  );
+  ) : null;
 };
 
 export default ReviewsMovie;

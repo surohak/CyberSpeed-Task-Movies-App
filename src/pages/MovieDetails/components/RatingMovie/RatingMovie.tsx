@@ -9,7 +9,7 @@ interface IRatingMovieProps {
 }
 
 const RatingMovie = ({ movie }: IRatingMovieProps) => {
-  return (
+  return movie.aggregateRating ? (
     <>
       <div className={styles.sectionTitle}>Rating</div>
       <div className={styles.sectionContainer}>
@@ -23,7 +23,7 @@ const RatingMovie = ({ movie }: IRatingMovieProps) => {
         <span>{movie.aggregateRating.worstRating}</span>
       </div>
     </>
-  );
+  ) : null;
 };
 
 export default RatingMovie;
