@@ -20,11 +20,15 @@
     cursor: pointer;
     &:hover {
       background-color: $content_alpha_100;
+      .movieItemImg {
+        transform: scale(1.1);
+      }
     }
     .movieItemImg {
       width: 72px;
       height: 108px;
       border-radius: 8px;
+      transition: transform $transition_timing;
     }
     .movieItemInfo {
       .movieTitle {
