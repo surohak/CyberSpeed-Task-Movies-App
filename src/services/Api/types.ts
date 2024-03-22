@@ -19,6 +19,7 @@ export interface IRequestParams {
   type: ApiTypes;
   url?: string;
   pathId?: string;
+  handler?: () => void;
 }
 
 export interface IAPIOptions {

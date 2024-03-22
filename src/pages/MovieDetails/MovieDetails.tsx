@@ -22,7 +22,9 @@ const MovieDetails = () => {
   const getMovieDetails = useCallback(async () => {
     if (!id) return;
 
-    const res = await Api.getMovieDetails(id);
+    const res = await Api.getMovieDetails(id, () => {
+      navigate('/');
+    });
 
     if (!res) return;
 

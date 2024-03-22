@@ -19,12 +19,12 @@ class Api {
   public getMoviesList = (searchValue?: string) =>
     this.request({ method: this.methods.get, params: { type: ApiTypes.search }, query: `?q=${searchValue}` });
 
-  public getMovieDetails = (id: string) =>
-    this.request({ method: this.methods.get, params: { type: ApiTypes.search }, query: `?tt=${id}` });
+  public getMovieDetails = (id: string, handler?: () => void) =>
+    this.request({ method: this.methods.get, params: { type: ApiTypes.search, handler }, query: `?tt=${id}` });
 
   private request = async (options: IAPIOptions) => {
     const { method, params, query } = options;
-    const { type, url, pathId } = params || {};
+    const { type, url, pathId, handler } = params || {};
 
     try {
       const res = await fetch(url || `https://${type}.${this.baseUrl}/${pathId || ''}${query || ''}`, {
@@ -39,6 +39,7 @@ class Api {
 
       if (!res.ok) {
         alert('Error: Something went wrong. Please try again later.');
+        handler && handler();
         return;
       }
 
@@ -48,6 +49,7 @@ class Api {
       console.debug(err);
 
       alert('Error: Something went wrong. Please try again later.');
+      handler && handler();
     }
   };
 }
