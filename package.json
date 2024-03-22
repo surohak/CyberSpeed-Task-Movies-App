@@ -20,7 +20,8 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "electron-start": "concurrently --kill-others \"electron .\" \"watch 'npm run build' ./src\"",
-    "test": "vitest"
+    "test": "vitest",
+    "lint": "eslint . --ext .ts,.tsx"
   },
   "browserslist": {
     "production": [
